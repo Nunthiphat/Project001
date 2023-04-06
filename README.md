@@ -11,38 +11,46 @@
  ```mermaid
  classDiagram
   class Login{
+  +userData:userData
+  +Namedata:string
+  +Roledata:string
+  +Passcheck:bool
   -loginBtn_Click():void
-  -ReadLine():void
-  -Split():void
-  -checkPass():void
-  -Show():void
-  -WriteLine():void
-  -ToString():void
   }
   class userData{
-  -WriteLine():void
-  -ReadLine():void
-  -Split():void
-  -Equals():void
-  -ToString():string
+  +Name:string
+  +Username:string
+  +Password:string
   -checkPass():bool
   }
-  class admin{
-  -couponCode:string
-  -minimumPice:double
-  +creat(double min):void
-  +getCoupon():void
+  class Admin{
+  -button1_Click():void
+  -getProducts():Products
+  -LoadCSV():List<Products>
+  -saveToolStripMenuItem_Click():void
+  -BindData():void
+  -load_Click():void
   }
   class employee{
-  -totalPice:double
-  +Bill(pay double,getmoney Double):void
-  +payBill():double
+  -openToolStripMenuItem_Click():void
+  -load_Click():void
+  -BindData():void
   }
   class Product{
-    +string pdName
-    +int pdPrice
-    -getpdName()
-    -getpdPrice()
+    +pdname:string
+    +pdPrice:int
+    -getpdName():string
+    -getpdPrice():string
  }
 
+ Login <|-- Admin
+ Login <|-- employee
+ Login <|-- userData
+ Admin <|-- Product
+ employee <|-- Product
+
+```
+ชื่อผู้พัฒนา
+```
+นายนันทิพัฒน์ บุตรวัง 653450094-8
 ```
