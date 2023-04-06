@@ -8,8 +8,8 @@ namespace Project_001
 {
     public class Products
     {
-        private string pdName;
-        private int pdPrice;
+        public string pdName;
+        public int pdPrice;
         public Products(string pdname,int pdprice)
         {
             this.pdName = pdname;

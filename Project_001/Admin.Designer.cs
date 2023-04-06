@@ -40,6 +40,8 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
+            textBox1 = new TextBox();
+            load = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -149,11 +151,31 @@
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(94, 187);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(228, 27);
+            textBox1.TabIndex = 10;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // load
+            // 
+            load.Location = new Point(328, 185);
+            load.Name = "load";
+            load.Size = new Size(70, 29);
+            load.TabIndex = 11;
+            load.Text = "Load";
+            load.UseVisualStyleBackColor = true;
+            load.Click += load_Click;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(534, 450);
+            Controls.Add(load);
+            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -186,5 +208,7 @@
         private ToolStripMenuItem saveToolStripMenuItem;
         private DataGridViewTextBoxColumn Foodname;
         private DataGridViewTextBoxColumn Price;
+        private TextBox textBox1;
+        private Button load;
     }
 }

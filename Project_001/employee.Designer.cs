@@ -33,6 +33,8 @@
             Price2 = new DataGridViewTextBoxColumn();
             menuStrip1 = new MenuStrip();
             openToolStripMenuItem = new ToolStripMenuItem();
+            textBox1 = new TextBox();
+            load = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -43,7 +45,7 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name2, Price2 });
-            dataGridView1.Location = new Point(246, 175);
+            dataGridView1.Location = new Point(241, 231);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
@@ -84,11 +86,30 @@
             openToolStripMenuItem.Text = "Open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(241, 169);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(228, 27);
+            textBox1.TabIndex = 11;
+            // 
+            // load
+            // 
+            load.Location = new Point(475, 169);
+            load.Name = "load";
+            load.Size = new Size(70, 29);
+            load.TabIndex = 12;
+            load.Text = "Load";
+            load.UseVisualStyleBackColor = true;
+            load.Click += load_Click;
+            // 
             // employee
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(load);
+            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -108,5 +129,7 @@
         private DataGridViewTextBoxColumn Price2;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem openToolStripMenuItem;
+        private TextBox textBox1;
+        private Button load;
     }
 }

@@ -16,10 +16,10 @@ namespace Project_001
         {
             try
             {
-                string file = "C:\\source code\\oop\\Project_001\\Project_001\\user.csv";
+                string file = "C:\\source code\\oop\\Project001\\Project_001\\user.csv";
                 StreamReader sr = new StreamReader(file);
                 string row = "";
-
+                Console.WriteLine("Ello");
                 while ((row = sr.ReadLine()) != null)
                 {
                     string[] data = row.Split(",");
